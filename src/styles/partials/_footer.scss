@@ -1,0 +1,16 @@
+.footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding-block: 4em;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1em;
+    .footer-section {
+      p {
+        opacity: 0.8;
+      }
+      p.title {
+        opacity: 1;
+      }
+    }
+  }

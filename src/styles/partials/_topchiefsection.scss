@@ -1,0 +1,40 @@
+
+.section.chiefs {
+    display: block;
+  }
+  
+  .top-chiefs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5em;
+    margin-top: 3em;
+  }
+  
+  .cheif-card {
+    display: flex;
+    height: 120;
+    border-radius: 5px;
+    img {
+      height: 100%;
+      width: 120px;
+      border-radius: 5px;
+    }
+    .cheif-card-info {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 2.3em;
+      padding-left: 1em;
+      .chief-card-name {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: var(--text-color);
+      }
+      .chief-recipe-count,
+      .chief-cuisine {
+        font-size: 1.2em;
+        color: var(--text-light);
+      }
+    }
+  }
