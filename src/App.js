@@ -1,20 +1,19 @@
-import Main from "./components/Main/Main";
-import Middlesection from "./components/Middlesection/Middlesection";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
+import Dish from "./components/Dish/Dish";
 import Navbar from "./components/Navbar/Navbar";
-import Quotesection from "./components/Quotesection/Quotesection";
-import Topcheif from "./components/Topcheif/Topcheif";
+import Cart from "./components/Cart/Cart";
 import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className="container main">
-        <Main />
-        <Middlesection />
-        <Quotesection />
-        <Topcheif />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/dishes" element={<Dish />}></Route>
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
       <Footer />
     </div>
   );

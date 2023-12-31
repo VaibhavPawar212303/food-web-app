@@ -10,13 +10,13 @@ function Navbar() {
       icon: faHome,
     },
     {
-      name: "Recipes",
-      path: "/recipes",
-      icon: faList,
+      name: "Dishes",
+      path: "/dishes",
+      icon: faCog,
     },
     {
-      name: "Settings",
-      path: "/settings",
+      name: "Cart",
+      path: "/cart",
       icon: faCog,
     },
   ];
@@ -26,7 +26,7 @@ function Navbar() {
   return (
     <>
       <div className="navbar container">
-        <a href="#!" className="logo">
+        <a href="/" className="logo">
           Dappled
         </a>
         <div className="nav-links">
