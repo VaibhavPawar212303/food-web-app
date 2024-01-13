@@ -141,8 +141,16 @@ img {
   .cheif-card {
     box-shadow: 0 5px 10px var(--shadow-color);
   }
+  .main-card-container {
+    display: flex;
+    flex-direction: column;
+  }
   .container {
     padding-inline: 6vw;
+  }
+  .cart-container{
+    display: flex;
+    flex-direction: column;
   }
   .footer {
     grid-template-columns: repeat(4, 1fr);

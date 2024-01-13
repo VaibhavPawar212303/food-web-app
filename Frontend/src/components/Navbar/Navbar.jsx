@@ -1,8 +1,13 @@
-import React, { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
-import { faHome, faList, faCog } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faCog } from "@fortawesome/free-solid-svg-icons";
+import { useState, useContext } from "react";
+import { cartContext } from "../Utilities/context";
+import { Link } from "react-router-dom";
+
 function Navbar() {
+  const cart = useContext(cartContext);
   const [ShowSidebar, setShowSidebar] = useState(false);
+
   const Links = [
     {
       name: "Home",
@@ -14,15 +19,20 @@ function Navbar() {
       path: "/dishes",
       icon: faCog,
     },
-    {
-      name: "Cart",
-      path: "/cart",
-      icon: faCog,
-    },
   ];
+
   function closeSidebar() {
     setShowSidebar(false);
   }
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
+  const productCount = cart.items.reduce(
+    (sum, product) => sum + product.quantity,
+    0
+  );
+
   return (
     <>
       <div className="navbar container">
@@ -34,6 +44,9 @@ function Navbar() {
             <a href={link.path}>{link.name}</a>
           ))}
         </div>
+        <Link to="/cart" className="cart-button">
+          Cart({productCount}) Added
+        </Link>
         <div
           onClick={() => setShowSidebar(true)}
           className={ShowSidebar ? "sidebar-btn active" : "sidebar-btn"}

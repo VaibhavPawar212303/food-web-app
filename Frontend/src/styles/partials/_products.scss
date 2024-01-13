@@ -1,6 +1,6 @@
 .main-card-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+  grid-template-columns: repeat(3, 0.3fr); /* Three equal-width columns */
 }
 .card-container {
   background-color: #ffffff;
@@ -25,7 +25,7 @@
 .card-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color:var(--primary-color);
+  background-color: var(--primary-color);
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -33,4 +33,12 @@
 }
 .card-button:hover {
   background-color: var(--primary-color);
+}
+
+.delete-cart-button {
+  margin-top: 6px;
+}
+
+.add-cart-button{
+  margin-right: 5px;
 }
