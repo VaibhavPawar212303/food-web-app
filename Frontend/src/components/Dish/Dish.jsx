@@ -2,8 +2,19 @@ import React from "react";
 import { useContext } from "react";
 import { cartContext } from "../Utilities/context";
 import { Button, Form, Row, Col, Navbar } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function Dish(props) {
+  const navigate = useNavigate();
+  const validateTokenAndAddProduct = () => {
+    const token = localStorage.getItem("token");
+    console.log(token);
+    if (!token) {
+      return navigate("/login", { replace: true });
+    } else {
+      cart.addOneToCart(product.id);
+    }
+  };
   const product = props.product;
   const cart = useContext(cartContext);
   const productQuantity = cart.getProductQuantity(product.id);
@@ -52,13 +63,7 @@ function Dish(props) {
           </Button>
         </>
       ) : (
-        <a
-          href="#"
-          class="card-button"
-          onClick={() => {
-            cart.addOneToCart(product.id);
-          }}
-        >
+        <a href="#" class="card-button" onClick={validateTokenAndAddProduct}>
           Add To Cart
         </a>
       )}

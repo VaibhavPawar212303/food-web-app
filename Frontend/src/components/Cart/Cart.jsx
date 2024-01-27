@@ -7,6 +7,7 @@ import axios from 'axios';
 
 function Cart() {
   const cart = useContext(cartContext);
+
   const handlePayment = async () => {
     try {
       const orderUrl = "http://localhost:5000/api/payment/orders";
@@ -19,32 +20,37 @@ function Cart() {
   };
 
   const initPayment = (data) => {
-		const options = {
-			key: "rzp_test_rEMvp9G69eq7Ym",
-			amount: data.amount,
-			currency: data.currency,
-			description: "Test Transaction",
-			order_id: data.id,
-			handler: async (response) => {
-				try {
-					const verifyUrl = "http://localhost:5000/api/payment/verify";
-					const { data } = await axios.post(verifyUrl, response);
-					console.log(data);
-				} catch (error) {
-					console.log(error);
-				}
-			},
-			theme: {
-				color: "#3399cc",
-			},
-		};
-		const rzp1 = new window.Razorpay(options);
-		rzp1.open();
-	};
-
-
-
-
+    const options = {
+      key: "rzp_test_rEMvp9G69eq7Ym",
+      amount: data.amount,
+      currency: data.currency,
+      description: "Test Transaction",
+      order_id: data.id,
+      handler: async (response) => {
+        try {
+          const verifyUrl = "http://localhost:5000/api/payment/verify";
+          const { data } = await axios.post(verifyUrl, response);
+          try {
+            await axios.post("http://localhost:5000/api/order/", {
+              userID: "testuser001",
+              order: cart
+            });
+            
+          } catch (error) {
+            console.log(error)
+          }
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    const rzp1 = new window.Razorpay(options);
+    rzp1.open();
+  };
 
   return (
     <div className="container main">

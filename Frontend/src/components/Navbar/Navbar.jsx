@@ -1,5 +1,5 @@
 import Sidebar from "../Sidebar/Sidebar";
-import { faHome, faCog } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faCog, faFish, faBucket, faColonSign, faSign, faSignIn, faRegistered, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useState, useContext } from "react";
 import { cartContext } from "../Utilities/context";
 import { Link } from "react-router-dom";
@@ -17,8 +17,23 @@ function Navbar() {
     {
       name: "Dishes",
       path: "/dishes",
-      icon: faCog,
+      icon: faFish
     },
+    {
+      name: "Order",
+      path: "/orders",
+      icon: faBucket,
+    }, ,
+    {
+      name: "Login",
+      path: "/login",
+      icon: faSignIn,
+    },
+    {
+      name: "Register",
+      path: "/register",
+      icon: faUser,
+    }
   ];
 
   function closeSidebar() {

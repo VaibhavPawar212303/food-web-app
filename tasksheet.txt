@@ -1,0 +1,46 @@
+Total Task
+
+1.user profile for old order 
+2.create a function to validate user token 
+3.update user table with auto update primary key 
+4.push all this changes to production and test it 
+5.add link for login page to register and register to login 
+6.maintain whole code in one repo 
+7.update the test for spikemark 
+8.add and write post for cypress on api testing 
+9.
+10.
+
+Task Done 
+
+1.updated the container size 
+2.add login and register in nav bar 
+3.create login and register routes
+4.create register page 
+5.create login page 
+6.change the sidebar icon for nav bar
+7.fix and create route and correct file for payments
+8.create seperate db of foodapplication on cocroach db 
+9.create user controller folder  
+10.connect with db 
+11.update packages for jstoken and pg for postgrace 
+12.create table for user details in foodapplication db with field (username,email,pass,address)
+13.complete user register route 
+14.complete user login route 
+15.revise api developement concepts 
+16.connect register page Ui with backend 
+17.connect login page Ui with backend 
+18.validate the user navigation after successfull register 
+19.validate the user navigation after login 
+20.create user register controller and test it 
+21.create user login controller and test it 
+22.create a function for validate token while adding product 
+23.create table for order data with (autuincrement id, user id and product cart)
+24.create and update route for order 
+25.create a function to get user order by id
+26.create a function will excute after complete payments to add card to db 
+27.create order page for showcase of the order with seperate route 
+28.
+
+
+
