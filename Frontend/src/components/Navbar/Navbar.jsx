@@ -1,5 +1,15 @@
 import Sidebar from "../Sidebar/Sidebar";
-import { faHome, faCog, faFish, faBucket, faColonSign, faSign, faSignIn, faRegistered, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faCog,
+  faFish,
+  faBucket,
+  faColonSign,
+  faSign,
+  faSignIn,
+  faRegistered,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { useState, useContext } from "react";
 import { cartContext } from "../Utilities/context";
 import { Link } from "react-router-dom";
@@ -17,13 +27,14 @@ function Navbar() {
     {
       name: "Dishes",
       path: "/dishes",
-      icon: faFish
+      icon: faFish,
     },
     {
       name: "Order",
       path: "/orders",
       icon: faBucket,
-    }, ,
+    },
+    ,
     {
       name: "Login",
       path: "/login",
@@ -33,7 +44,7 @@ function Navbar() {
       name: "Register",
       path: "/register",
       icon: faUser,
-    }
+    },
   ];
 
   function closeSidebar() {
@@ -52,7 +63,7 @@ function Navbar() {
     <>
       <div className="navbar container">
         <a href="/" className="logo">
-          Dappled
+          Jyoti’s cloud kitchen
         </a>
         <div className="nav-links">
           {Links.map((link) => (
