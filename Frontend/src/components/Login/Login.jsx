@@ -20,7 +20,10 @@ function Login() {
   const passDataToDb = () => {
     axios({
       method: "post",
-      url: "https://dashboard-api-backhend-production-f65b.up.railway.app/api/user/loginuser",
+      url: "https://food-delivery-api-production-1cdc.up.railway.app/api/user/loginuser",
+      headers: {
+        "Content-Type": "application/json",
+      },
       data: {
         email: email,
         password: password,

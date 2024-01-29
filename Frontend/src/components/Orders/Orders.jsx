@@ -11,7 +11,7 @@ function Orders() {
   //get all order of user
   axios({
     method: "get",
-    url: "https://dashboard-api-backhend-production-f65b.up.railway.app/api/order/getorder",
+    url: "https://food-delivery-api-production-1cdc.up.railway.app/api/order/getorder",
   }).then(function (res) {
     setOrder(res.data.orders);
   });

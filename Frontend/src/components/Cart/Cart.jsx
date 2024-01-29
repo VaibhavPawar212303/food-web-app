@@ -10,7 +10,7 @@ function Cart() {
 
   const handlePayment = async () => {
     try {
-      const orderUrl = "https://dashboard-api-backhend-production-f65b.up.railway.app/api/payment/orders";
+      const orderUrl = "https://food-delivery-api-production-1cdc.up.railway.app/api/payment/orders";
       const { data } = await axios.post(orderUrl, { amount: cart.getTotalCost().toFixed(2) });
       console.log(data);
       initPayment(data.data);
@@ -28,10 +28,10 @@ function Cart() {
       order_id: data.id,
       handler: async (response) => {
         try {
-          const verifyUrl = "https://dashboard-api-backhend-production-f65b.up.railway.app/api/payment/verify";
+          const verifyUrl = "https://food-delivery-api-production-1cdc.up.railway.app/api/payment/verify";
           const { data } = await axios.post(verifyUrl, response);
           try {
-            await axios.post("https://dashboard-api-backhend-production-f65b.up.railway.app/api/order/", {
+            await axios.post("https://food-delivery-api-production-1cdc.up.railway.app/api/order/", {
               userID: "testuser001",
               order: cart
             });
