@@ -28,10 +28,7 @@ function Register() {
   const passDataToDb = () => {
     axios({
       method: "post",
-      url: "https://food-delivery-api-production-1cdc.up.railway.app/api/user/createuser",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      url: "https://dashboard-api-backhend-production-f65b.up.railway.app/api/user/createuser",
       data: {
         username: username,
         email: email,
