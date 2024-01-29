@@ -29,7 +29,7 @@ function Register() {
     axios({
       method: "post",
       url: "https://dashboard-api-backhend-production-f65b.up.railway.app/api/user/createuser",
-      headers:"application/json",
+      'Content-Type':'application/json',
       data: {
         username: username,
         email: email,
