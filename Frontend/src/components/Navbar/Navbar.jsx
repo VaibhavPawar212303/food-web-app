@@ -13,7 +13,7 @@ import {
 import { useState, useContext } from "react";
 import { cartContext } from "../Utilities/context";
 import { Link } from "react-router-dom";
-
+import Logo from "../Image/Logo.jpeg";
 function Navbar() {
   const cart = useContext(cartContext);
   const [ShowSidebar, setShowSidebar] = useState(false);
@@ -63,7 +63,7 @@ function Navbar() {
     <>
       <div className="navbar container">
         <a href="/" className="logo">
-          Jyoti’s cloud kitchen
+          <img src={Logo} alt="logo" className="logo" />
         </a>
         <div className="nav-links">
           {Links.map((link) => (

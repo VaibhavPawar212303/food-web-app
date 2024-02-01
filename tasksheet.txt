@@ -42,5 +42,6 @@ Task Done
 27.create order page for showcase of the order with seperate route 
 28.push all this changes to production and test it 
 29.Fix the api issue 
-30.
+30.updated dish desc
+31.update logo 
 
