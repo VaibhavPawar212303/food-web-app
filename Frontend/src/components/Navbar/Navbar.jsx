@@ -13,7 +13,7 @@ import {
 import { useState, useContext } from "react";
 import { cartContext } from "../Utilities/context";
 import { Link } from "react-router-dom";
-import Logo from "../Image/Logo.jpeg";
+import Logo from "../Image/Logo.png";
 function Navbar() {
   const cart = useContext(cartContext);
   const [ShowSidebar, setShowSidebar] = useState(false);
